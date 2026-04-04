@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=ParticleDE
+Comment=A lightweight desktop built with Openbox and friends
+Exec=particlede-session
+Type=Application
+DesktopNames=ParticleDE
