@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=ParticleDE
+Comment=Lightweight Openbox Desktop
+Exec=/usr/local/bin/particlede-session
+TryExec=/usr/local/bin/particlede-session
+Type=XSession
+DesktopNames=ParticleDE

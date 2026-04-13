@@ -1,0 +1,97 @@
+# Background 1: 面板（半透明深色圆角，整排）
+rounded = 8
+border_width = 0
+background_color = #1a1b26 85
+border_color = #000000 0
+background_color_hover = #363a4f 85
+background_color_pressed = #1a1b26 85
+
+# Background 2: 普通任务
+rounded = 6
+border_width = 0
+background_color = #000000 0
+background_color_hover = #5c5c8a 50
+background_color_pressed = #5c5c8a 70
+
+# Background 3: 激活任务（匹配Arc-Dark高亮蓝）
+rounded = 6
+border_width = 0
+background_color = #7aa2f7 40
+background_color_hover = #7aa2f7 50
+background_color_pressed = #7aa2f7 60
+
+# Background 4: 紧急任务
+rounded = 4
+border_width = 0
+background_color = #ff9e64 100
+
+# Background 5: 提示框
+rounded = 4
+border_width = 0
+background_color = #1a1b26 100
+
+#-------------------------------------
+# Panel 核心：整排任务栏
+#-------------------------------------
+panel_items = LTSC
+panel_size = 100% 42
+panel_margin = 0 0
+panel_padding = 10 0 10
+panel_background_id = 1
+wm_menu = 1
+panel_position = bottom center
+panel_layer = top
+panel_monitor = all
+panel_shrink = 0
+autohide = 0
+strut_policy = follow_size
+
+#-------------------------------------
+# Taskbar 核心：图标从左往右排
+#-------------------------------------
+taskbar_mode = single_desktop
+taskbar_padding = 4 0 4
+task_align = left
+task_text = 1
+task_icon = 1
+task_centered = 0
+task_maximum_size = 180 42
+task_padding = 8 4 8
+task_font_color = #e0e0e0 100
+task_active_font_color = #ffffff 100
+task_background_id = 2
+task_active_background_id = 3
+task_urgent_background_id = 4
+
+#-------------------------------------
+# Systray & Launcher
+#-------------------------------------
+systray_padding = 0 4 8
+systray_background_id = 0
+systray_icon_size = 22
+systray_monitor = 1
+launcher_icon_theme = Papirus-Dark
+launcher_icon_size = 26
+launcher_padding = 6 4 6
+
+#-------------------------------------
+# Clock 核心：固定在右下角
+#-------------------------------------
+time1_format = %H:%M
+clock_font_color = #ffffff 100
+clock_padding = 8 4
+clock_background_id = 0
+clock_tooltip = 1
+clock_lclick_command = ""
+clock_rclick_command = ""
+clock_mclick_command = ""
+clock_urgent_background_id = 0
+# 强制时钟靠右
+clock_position = right
+
+#-------------------------------------
+# Tooltip
+#-------------------------------------
+tooltip_padding = 6 6
+tooltip_background_id = 5
+tooltip_font_color = #e0e0e0 100
