@@ -1,5 +1,0 @@
-#!/bin/bash
-# ParticleDE Desktop Session
-pcmanfm --desktop &
-tint2 &
-exec openbox
