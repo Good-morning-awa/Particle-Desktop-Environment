@@ -1,5 +1,25 @@
 #!/bin/bash
 # ParticleDE Desktop Session
-pcmanfm --desktop &
-tint2 &
+
+# 确保环境变量设置
+export XDG_CURRENT_DESKTOP="ParticleDE"
+export DESKTOP_SESSION="particlede"
+
+# 启动组件的函数
+start_component() {
+    local component=$1
+    local command=$2
+    echo "Starting $component..."
+    $command &
+    # 给组件一些启动时间
+    sleep 0.2
+}
+
+# 按顺序启动组件
+start_component "PCManFM Desktop" "pcmanfm --desktop"
+start_component "Tint2 Panel" "tint2"
+start_component "Rofi (background)" "rofi -daemon"
+
+# 最后执行Openbox，作为会话的主进程
+echo "Starting Openbox..."
 exec openbox
