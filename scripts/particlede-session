@@ -1,0 +1,18 @@
+#!/bin/bash
+export DISPLAY=:0
+export XAUTHORITY=$HOME/.Xauthority
+
+WALLPAPER="$HOME/Pictures/particle-wallpapers/wallpaper-1080p.png"
+[ -f "$WALLPAPER" ] && feh --bg-scale "$WALLPAPER"
+
+sleep 1
+
+TINT2_CONF="$HOME/.config/tint2/tint2rc"
+[ -f "$TINT2_CONF" ] && tint2 -c "$TINT2_CONF" &
+
+pcmanfm --desktop --profile LXDE --icon-theme Papirus-Dark &
+
+sed -i '/<theme>.*<\/theme>/d' "$HOME/.config/openbox/rc.xml"
+sed -i '/<openbox_config>/a \  <theme>Arc-Dark<\/theme>' "$HOME/.config/openbox/rc.xml"
+openbox --reconfigure
+exec openbox-session
